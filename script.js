@@ -35,7 +35,15 @@ console.log(isValid);
 
 let playerDice = Math.floor(Math.random() * 6) + 1;
 let computerDice = Math.floor(Math.random() * 6) + 1;
-console.log(playerDice);
-console.log(computerDice);
+console.log(`Player dice: ${playerDice}`);
+console.log(`Computer dice: ${computerDice}`);
 
-console.log(Math.max(playerDice, computerDice)); 
+console.log(`Max is: ${Math.max(playerDice, computerDice)}`); 
+
+if (playerDice > computerDice) {
+    console.log('YOU WIN!');
+} else if (playerDice < computerDice) {
+    console.log('COMPUTER WIN, YOU LOSE!');
+} else {
+    console.log('Even, play again!');
+}
