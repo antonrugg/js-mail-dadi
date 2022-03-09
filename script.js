@@ -50,15 +50,17 @@ console.log(isValid);
 
    
 
-     
+    //add code inside a function
 (function repeat() {
+    // define two random  6 sided dice one for each
     let playerDice = Math.floor(Math.random() * 6) + 1;
     let computerDice = Math.floor(Math.random() * 6) + 1;
+    //log dices
     console.log(`Player dice: ${playerDice}`);
     console.log(`Computer dice: ${computerDice}`);
-
+//log max of the two random dices
     console.log(`Max is: ${Math.max(playerDice, computerDice)}`);
-
+//declare player win if his dice is > of computer dice, if its even play again
     if (playerDice > computerDice) {
         console.log('YOU WIN!');
     } else if (playerDice < computerDice) {
@@ -67,6 +69,8 @@ console.log(isValid);
         console.log('Even, play again!');
 
     }
+
+    //check if player dice is equal to computer dice, if true invoce repeat function with a brief setTimeout, actually i can move this in else above
     if (playerDice === computerDice) {
         setTimeout(() => {
             repeat()
