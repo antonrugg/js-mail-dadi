@@ -33,17 +33,43 @@ console.log(isValid);
 //     Se dobbiamo confrontare qualcosa che "cosa" ci serve ?
 
 
-let playerDice = Math.floor(Math.random() * 6) + 1;
-let computerDice = Math.floor(Math.random() * 6) + 1;
-console.log(`Player dice: ${playerDice}`);
-console.log(`Computer dice: ${computerDice}`);
 
-console.log(`Max is: ${Math.max(playerDice, computerDice)}`); 
+// let playerDice = Math.floor(Math.random() * 6) + 1;
+// let computerDice = Math.floor(Math.random() * 6) + 1;   
+// console.log(`Player dice: ${playerDice}`);
+// console.log(`Computer dice: ${computerDice}`);
+// console.log(`Max is: ${Math.max(playerDice, computerDice)}`);
 
-if (playerDice > computerDice) {
-    console.log('YOU WIN!');
-} else if (playerDice < computerDice) {
-    console.log('COMPUTER WIN, YOU LOSE!');
-} else {
-    console.log('Even, play again!');
-}
+//     if (playerDice > computerDice) {
+//         console.log('YOU WIN!');
+//     } else if (playerDice < computerDice) {
+//         console.log('COMPUTER WIN, YOU LOSE!');
+//     } else {
+//         console.log('Even, play again!');
+//     }
+
+   
+
+     
+(function repeat() {
+    let playerDice = Math.floor(Math.random() * 6) + 1;
+    let computerDice = Math.floor(Math.random() * 6) + 1;
+    console.log(`Player dice: ${playerDice}`);
+    console.log(`Computer dice: ${computerDice}`);
+
+    console.log(`Max is: ${Math.max(playerDice, computerDice)}`);
+
+    if (playerDice > computerDice) {
+        console.log('YOU WIN!');
+    } else if (playerDice < computerDice) {
+        console.log('COMPUTER WIN, YOU LOSE!');
+    } else {
+        console.log('Even, play again!');
+
+    }
+    if (playerDice === computerDice) {
+        setTimeout(() => {
+            repeat()
+        }, 100)
+    }
+})()
