@@ -14,9 +14,11 @@ let userEmail = prompt('Enter your email');
 let isValid = 'Invalid email';
 
 //ask if useremail is equal to every index inside email array, if true change isValid variable with proper message, if not do nothing
-for (let i = 0; i < admins.length; i++) {
-    if (userEmail === admins[i]) {
-        isValid = 'Valid email, welcome back';
+if (userEmail) {
+    for (let i = 0; i < admins.length; i++) {
+        if (userEmail.trim().toLowerCase() === admins[i]) {
+            isValid = 'Valid email, welcome back';
+        }
     }
 }
 
